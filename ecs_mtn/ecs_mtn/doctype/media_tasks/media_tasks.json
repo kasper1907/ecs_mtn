@@ -2,13 +2,14 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "hash",
+ "autoname": "naming_series:M-TASK-.YYYY.-.#####",
  "creation": "2024-07-22 10:57:48.730184",
  "default_view": "List",
  "doctype": "DocType",
  "document_type": "Setup",
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "subject",
   "project",
   "issue",
@@ -17,17 +18,20 @@
   "is_template",
   "column_break_dctn",
   "status",
+  "project_steps",
   "priority",
   "task_weight",
   "completed_by",
   "completed_on",
   "sb_timeline",
+  "month",
   "exp_start_date",
   "expected_time",
   "start",
   "column_break_auqo",
   "exp_end_date",
   "progress",
+  "published_date",
   "duration",
   "is_milestone",
   "sb_details",
@@ -51,7 +55,34 @@
   "company",
   "lft",
   "rgt",
-  "is_group"
+  "is_group",
+  "videos_tab",
+  "attach_1",
+  "attach_2",
+  "column_break_nwfd",
+  "attach_3",
+  "attach_4",
+  "column_break_envp",
+  "attach_5",
+  "attach_6",
+  "design_tab",
+  "attach_7",
+  "attach_8",
+  "column_break_jmhd",
+  "attach_9",
+  "attach_10",
+  "column_break_vuov",
+  "attach_11",
+  "attach_12",
+  "content_tab",
+  "attach_13",
+  "attach_14",
+  "column_break_qywi",
+  "attach_15",
+  "attach_16",
+  "column_break_cuei",
+  "attach_17",
+  "attach_18"
  ],
  "fields": [
   {
@@ -317,16 +348,172 @@
    "fieldname": "is_group",
    "fieldtype": "Check",
    "label": "Is Group"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "videos_tab",
+   "fieldtype": "Tab Break",
+   "label": "Videos"
+  },
+  {
+   "fieldname": "attach_1",
+   "fieldtype": "Attach",
+   "label": "Attach1"
+  },
+  {
+   "fieldname": "attach_2",
+   "fieldtype": "Attach",
+   "label": "Attach2"
+  },
+  {
+   "fieldname": "column_break_nwfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_3",
+   "fieldtype": "Attach",
+   "label": "Attach3"
+  },
+  {
+   "fieldname": "attach_4",
+   "fieldtype": "Attach",
+   "label": "Attach4"
+  },
+  {
+   "fieldname": "column_break_envp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_5",
+   "fieldtype": "Attach",
+   "label": "Attach5"
+  },
+  {
+   "fieldname": "attach_6",
+   "fieldtype": "Attach",
+   "label": "Attach6"
+  },
+  {
+   "fieldname": "design_tab",
+   "fieldtype": "Tab Break",
+   "label": "Design"
+  },
+  {
+   "fieldname": "attach_7",
+   "fieldtype": "Attach",
+   "label": "Attach7"
+  },
+  {
+   "fieldname": "attach_8",
+   "fieldtype": "Attach",
+   "label": "Attach8"
+  },
+  {
+   "fieldname": "column_break_jmhd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_9",
+   "fieldtype": "Attach",
+   "label": "Attach9"
+  },
+  {
+   "fieldname": "attach_10",
+   "fieldtype": "Attach",
+   "label": "Attach10"
+  },
+  {
+   "fieldname": "column_break_vuov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_11",
+   "fieldtype": "Attach",
+   "label": "Attach11"
+  },
+  {
+   "fieldname": "attach_12",
+   "fieldtype": "Attach",
+   "label": "Attach12"
+  },
+  {
+   "fieldname": "content_tab",
+   "fieldtype": "Tab Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "attach_13",
+   "fieldtype": "Attach",
+   "label": "Attach13"
+  },
+  {
+   "fieldname": "attach_14",
+   "fieldtype": "Attach",
+   "label": "Attach14"
+  },
+  {
+   "fieldname": "column_break_qywi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_15",
+   "fieldtype": "Attach",
+   "label": "Attach15"
+  },
+  {
+   "fieldname": "attach_16",
+   "fieldtype": "Attach",
+   "label": "Attach16"
+  },
+  {
+   "fieldname": "column_break_cuei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_17",
+   "fieldtype": "Attach",
+   "label": "Attach17"
+  },
+  {
+   "fieldname": "attach_18",
+   "fieldtype": "Attach",
+   "label": "Attach18"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series"
+  },
+  {
+   "bold": 1,
+   "fieldname": "project_steps",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Steps",
+   "no_copy": 1,
+   "options": "To Do\nContent Done\nDesign Tasks\nVideo Tasks\nVideo Done\nDesign Done\nPublished"
+  },
+  {
+   "fieldname": "published_date",
+   "fieldtype": "Date",
+   "label": "Published Date",
+   "no_copy": 1
   }
  ],
  "icon": "fa fa-check",
  "links": [],
  "max_attachments": 18,
- "modified": "2024-07-22 18:57:35.677596",
+ "modified": "2024-07-23 13:52:13.126056",
  "modified_by": "Administrator",
  "module": "Ecs Mtn",
  "name": "Media Tasks",
- "naming_rule": "Random",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
