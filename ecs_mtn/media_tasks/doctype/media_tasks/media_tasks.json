@@ -1,0 +1,541 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:M-TASK-.YYYY.-.#####",
+ "creation": "2024-07-22 10:57:48.730184",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "subject",
+  "project",
+  "issue",
+  "type",
+  "color",
+  "is_template",
+  "column_break_dctn",
+  "status",
+  "project_steps",
+  "priority",
+  "task_weight",
+  "completed_by",
+  "completed_on",
+  "sb_timeline",
+  "month",
+  "exp_start_date",
+  "expected_time",
+  "start",
+  "column_break_auqo",
+  "exp_end_date",
+  "progress",
+  "published_date",
+  "duration",
+  "is_milestone",
+  "sb_details",
+  "description",
+  "sb_depends_on",
+  "depends_on",
+  "depends_on_tasks",
+  "sb_actual",
+  "act_start_date",
+  "actual_time",
+  "act_end_date",
+  "sb_costing",
+  "total_costing_amount",
+  "column_break_yzbj",
+  "total_billing_amount",
+  "sb_more_info",
+  "review_date",
+  "closing_date",
+  "column_break_jukb",
+  "department",
+  "company",
+  "lft",
+  "rgt",
+  "is_group",
+  "videos_tab",
+  "attach_1",
+  "attach_2",
+  "column_break_nwfd",
+  "attach_3",
+  "attach_4",
+  "column_break_envp",
+  "attach_5",
+  "attach_6",
+  "design_tab",
+  "attach_7",
+  "attach_8",
+  "column_break_jmhd",
+  "attach_9",
+  "attach_10",
+  "column_break_vuov",
+  "attach_11",
+  "attach_12",
+  "content_tab",
+  "attach_13",
+  "attach_14",
+  "column_break_qywi",
+  "attach_15",
+  "attach_16",
+  "column_break_cuei",
+  "attach_17",
+  "attach_18"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Media Project",
+   "options": "Media Projects"
+  },
+  {
+   "fieldname": "issue",
+   "fieldtype": "Link",
+   "label": "Issue",
+   "options": "Issue"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Task Type"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_template",
+   "fieldtype": "Check",
+   "label": "Is Template"
+  },
+  {
+   "fieldname": "column_break_dctn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleted\nCancelled"
+  },
+  {
+   "bold": 1,
+   "fieldname": "project_steps",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Steps",
+   "no_copy": 1,
+   "options": "To Do\nContent Done\nDesign Tasks\nVideo Tasks\nVideo Done\nDesign Done\nPublished"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "type.weight",
+   "fieldname": "task_weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "depends_on": "eval: doc.status == \"Completed\"",
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "no_copy": 1,
+   "options": "User"
+  },
+  {
+   "depends_on": "eval: doc.status == \"Completed\"",
+   "fieldname": "completed_on",
+   "fieldtype": "Date",
+   "label": "Completed On",
+   "mandatory_depends_on": "eval: doc.status == \"Completed\""
+  },
+  {
+   "fieldname": "sb_timeline",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "exp_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_time",
+   "fieldtype": "Float",
+   "label": "Expected Time (in hours)"
+  },
+  {
+   "depends_on": "is_template",
+   "fieldname": "start",
+   "fieldtype": "Int",
+   "label": "Begin On (Days)"
+  },
+  {
+   "fieldname": "column_break_auqo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "exp_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected End Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "label": "Progress",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "published_date",
+   "fieldtype": "Date",
+   "label": "Published Date",
+   "no_copy": 1
+  },
+  {
+   "depends_on": "is_template",
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration (Days)"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_milestone",
+   "fieldtype": "Check",
+   "label": "Is Milestone"
+  },
+  {
+   "fieldname": "sb_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Task Description"
+  },
+  {
+   "fieldname": "sb_depends_on",
+   "fieldtype": "Section Break",
+   "label": "Dependencies"
+  },
+  {
+   "fieldname": "depends_on",
+   "fieldtype": "Table",
+   "label": "Dependent Tasks",
+   "options": "Task Depends On"
+  },
+  {
+   "fieldname": "depends_on_tasks",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "Depends on Tasks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_actual",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "act_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date (via Time Sheet)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_time",
+   "fieldtype": "Float",
+   "label": "Actual Time (in hours)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "act_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date (via Time Sheet)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_costing",
+   "fieldtype": "Section Break",
+   "label": "Costing"
+  },
+  {
+   "fieldname": "total_costing_amount",
+   "fieldtype": "Currency",
+   "label": "Total Costing Amount (via Time Sheet)",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yzbj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_billing_amount",
+   "fieldtype": "Currency",
+   "label": "Total Billing Amount (via Time Sheet)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_more_info",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Review Date"
+  },
+  {
+   "depends_on": "eval:doc.status == \"Closed\"",
+   "fieldname": "closing_date",
+   "fieldtype": "Date",
+   "label": "Closing Date"
+  },
+  {
+   "fieldname": "column_break_jukb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "videos_tab",
+   "fieldtype": "Tab Break",
+   "label": "Videos"
+  },
+  {
+   "fieldname": "attach_1",
+   "fieldtype": "Attach",
+   "label": "Attach1"
+  },
+  {
+   "fieldname": "attach_2",
+   "fieldtype": "Attach",
+   "label": "Attach2"
+  },
+  {
+   "fieldname": "column_break_nwfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_3",
+   "fieldtype": "Attach",
+   "label": "Attach3"
+  },
+  {
+   "fieldname": "attach_4",
+   "fieldtype": "Attach",
+   "label": "Attach4"
+  },
+  {
+   "fieldname": "column_break_envp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_5",
+   "fieldtype": "Attach",
+   "label": "Attach5"
+  },
+  {
+   "fieldname": "attach_6",
+   "fieldtype": "Attach",
+   "label": "Attach6"
+  },
+  {
+   "fieldname": "design_tab",
+   "fieldtype": "Tab Break",
+   "label": "Design"
+  },
+  {
+   "fieldname": "attach_7",
+   "fieldtype": "Attach",
+   "label": "Attach7"
+  },
+  {
+   "fieldname": "attach_8",
+   "fieldtype": "Attach",
+   "label": "Attach8"
+  },
+  {
+   "fieldname": "column_break_jmhd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_9",
+   "fieldtype": "Attach",
+   "label": "Attach9"
+  },
+  {
+   "fieldname": "attach_10",
+   "fieldtype": "Attach",
+   "label": "Attach10"
+  },
+  {
+   "fieldname": "column_break_vuov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_11",
+   "fieldtype": "Attach",
+   "label": "Attach11"
+  },
+  {
+   "fieldname": "attach_12",
+   "fieldtype": "Attach",
+   "label": "Attach12"
+  },
+  {
+   "fieldname": "content_tab",
+   "fieldtype": "Tab Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "attach_13",
+   "fieldtype": "Attach",
+   "label": "Attach13"
+  },
+  {
+   "fieldname": "attach_14",
+   "fieldtype": "Attach",
+   "label": "Attach14"
+  },
+  {
+   "fieldname": "column_break_qywi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_15",
+   "fieldtype": "Attach",
+   "label": "Attach15"
+  },
+  {
+   "fieldname": "attach_16",
+   "fieldtype": "Attach",
+   "label": "Attach16"
+  },
+  {
+   "fieldname": "column_break_cuei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_17",
+   "fieldtype": "Attach",
+   "label": "Attach17"
+  },
+  {
+   "fieldname": "attach_18",
+   "fieldtype": "Attach",
+   "label": "Attach18"
+  }
+ ],
+ "icon": "fa fa-check",
+ "links": [],
+ "max_attachments": 18,
+ "modified": "2024-07-23 16:05:42.213647",
+ "modified_by": "Administrator",
+ "module": "media tasks",
+ "name": "Media Tasks",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "timeline_field": "project",
+ "title_field": "subject",
+ "track_seen": 1
+}

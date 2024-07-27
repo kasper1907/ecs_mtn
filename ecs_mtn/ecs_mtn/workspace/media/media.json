@@ -1,0 +1,80 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Et1cV07S88\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Media</span>\",\"col\":12}},{\"id\":\"RENaHLAcqY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Media Projects\",\"col\":3}},{\"id\":\"uQmL2VEF3J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Media Tasks\",\"col\":3}},{\"id\":\"4kQ23jN24X\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"LH5IYrIdX9\",\"type\":\"card\",\"data\":{\"card_name\":\"Media List\",\"col\":4}}]",
+ "creation": "2024-07-23 10:24:26.734622",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Media",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Media List",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Media Projects",
+   "link_count": 0,
+   "link_to": "Media Projects",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Media Tasks",
+   "link_count": 0,
+   "link_to": "Media Tasks",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-07-23 16:08:20.181983",
+ "modified_by": "Administrator",
+ "module": "Ecs Mtn",
+ "name": "Media",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Media Manger"
+  }
+ ],
+ "sequence_id": 32.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Media Projects",
+   "link_to": "Media Projects",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Media Tasks",
+   "link_to": "Media Tasks",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Media"
+}
