@@ -1,0 +1,214 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-28 13:44:43.769202",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_name",
+  "status",
+  "project_type",
+  "is_active",
+  "percent_complete_method",
+  "percent_complete",
+  "column_break_jlfr",
+  "project_template",
+  "expected_start_date",
+  "expected_end_date",
+  "priority",
+  "department",
+  "customer_details_section",
+  "customer",
+  "column_break_gtgx",
+  "sales_order",
+  "users_section",
+  "users",
+  "copied_from",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "PROJ-.####",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_jlfr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Open\nCompleted\nCancelle",
+   "search_index": 1
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Type",
+   "options": "Project Type"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Select",
+   "label": "Is Active",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "Task Completion",
+   "fieldname": "percent_complete_method",
+   "fieldtype": "Select",
+   "label": "% Complete Method",
+   "options": "Manual\nTask Completion\nTask Progress\nTask Weight"
+  },
+  {
+   "bold": 1,
+   "fieldname": "percent_complete",
+   "fieldtype": "Percent",
+   "label": "% Completed",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "project_template",
+   "fieldtype": "Link",
+   "label": "From Template",
+   "options": "Project Template",
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Priority"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_gtgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "users_section",
+   "fieldtype": "Section Break",
+   "label": "Users"
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "Project User"
+  },
+  {
+   "fieldname": "copied_from",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Copied From",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-28 15:46:20.463815",
+ "modified_by": "Administrator",
+ "module": "Ecs Mtn",
+ "name": "Markting Project",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "project_name, customer, status, priority, is_active",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "timeline_field": "customer",
+ "title_field": "project_name",
+ "track_seen": 1
+}
