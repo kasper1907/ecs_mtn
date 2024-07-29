@@ -6,6 +6,7 @@
  "creation": "2024-07-28 13:44:43.769202",
  "default_view": "List",
  "doctype": "DocType",
+ "document_type": "Setup",
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
@@ -204,6 +205,7 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "notes_section",
    "fieldtype": "Section Break",
    "label": "Notes"
@@ -214,6 +216,7 @@
    "label": "Notes"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_18",
    "fieldtype": "Section Break",
    "label": "Start and End Dates"
@@ -240,6 +243,7 @@
    "label": "Actual End Date (via Timesheet)"
   },
   {
+   "collapsible": 1,
    "fieldname": "project_details",
    "fieldtype": "Section Break",
    "label": "Costing and Billing"
@@ -306,6 +310,7 @@
    "options": "Cost Center"
   },
   {
+   "collapsible": 1,
    "fieldname": "margin_section",
    "fieldtype": "Section Break",
    "label": "Margin"
@@ -327,6 +332,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "collapsible": 1,
    "fieldname": "monitor_progress",
    "fieldtype": "Section Break",
    "label": "Monitor Progress"
@@ -413,10 +419,11 @@
    "read_only": 1
   }
  ],
+ "icon": "fa fa-puzzle-piece",
  "index_web_pages_for_search": 1,
  "links": [],
  "max_attachments": 4,
- "modified": "2024-07-28 16:31:59.644429",
+ "modified": "2024-07-29 10:32:29.106690",
  "modified_by": "Administrator",
  "module": "markting project",
  "name": "Markting Project",
